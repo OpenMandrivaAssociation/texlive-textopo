@@ -6,7 +6,7 @@
 # catalog-version 1.5
 Name:		texlive-textopo
 Version:	1.5
-Release:	4
+Release:	5
 Summary:	Annotated membrane protein topology plots
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/textopo
