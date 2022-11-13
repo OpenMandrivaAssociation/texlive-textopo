@@ -1,19 +1,13 @@
-# revision 23796
-# category Package
-# catalog-ctan /macros/latex/contrib/textopo
-# catalog-date 2011-06-02 21:02:40 +0200
-# catalog-license gpl
-# catalog-version 1.5
 Name:		texlive-textopo
-Version:	1.5
-Release:	11
+Version:	23796
+Release:	1
 Summary:	Annotated membrane protein topology plots
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/textopo
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ A LaTeX package for setting shaded and annotated membrane
 protein topology plots and helical wheels.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -52,23 +46,11 @@ protein topology plots and helical wheels.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5-2
-+ Revision: 756788
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5-1
-+ Revision: 719719
-- texlive-textopo
-- texlive-textopo
-- texlive-textopo
-
