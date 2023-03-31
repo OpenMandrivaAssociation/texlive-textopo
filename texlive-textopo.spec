@@ -1,6 +1,6 @@
 Name:		texlive-textopo
 Version:	23796
-Release:	1
+Release:	2
 Summary:	Annotated membrane protein topology plots
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/textopo
