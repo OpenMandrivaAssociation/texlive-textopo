@@ -3,7 +3,7 @@ Version:	23796
 Release:	2
 Summary:	Annotated membrane protein topology plots
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/textopo
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/textopo
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/textopo.doc.r%{version}.tar.xz
